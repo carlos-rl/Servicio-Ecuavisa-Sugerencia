@@ -14,13 +14,14 @@ var toFormatDates = "YYYY-MM-DD";
 var oracleApi = async function (json = {}) {
 	try {
 		const raw = JSON.stringify({
-		    "picImg": "",
-		    "description": "Descripcion de prueba sugerencia",
-		    "title": "Prueba 1 sugerencia",
-		    "estado": false,
-		    "meta_existe": true,
-		    "data": [],
-		    "users_suscribed": 0
+		  "_id": "659ecf46f88896ff346d3bbf",
+		  "description": "asasss",
+		  "title": "pruebaa2",
+		  "estado": false,
+		  "meta_existe": true,
+		  "users_suscribed": 0,
+		  "data": [],
+		  "created_at": "2023-04-28T03:43:57.278Z"
 		});
 
 		const requestOptions = {
@@ -31,7 +32,7 @@ var oracleApi = async function (json = {}) {
 		  body: raw,
 		  redirect: "follow"
 		};
-		const resp = await fetch("https://sugerencias-ecuavisa.vercel.app/add", requestOptions);;
+		const resp = await fetch("https://bigdata.ecuavisa.com:10001/api/Trx/mdb/ISugerencia", requestOptions);;
 		return await resp.text();
 	} catch (error) {
 		console.log(error);
