@@ -1,12 +1,9 @@
-import "./src/database.js";
 import "dotenv/config.js";
 import express from "express";
-import mongoose from "mongoose";
 import { routes } from './src/routes/index.js';
 
 var app = express();
 var port = process.env.PORT || 8080;
-const ObjectIdS = mongoose.Types.ObjectId;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
