@@ -25,14 +25,14 @@ var oracleApi = async function (json = {}) {
 		});
 
 		const requestOptions = {
-		  method: "GET",
+		  method: "POST",
 		    headers: {
 		        'Content-Type': 'application/json'
 		    },
-		  // body: raw,
+		  body: raw,
 		  redirect: "follow"
 		};
-		const resp = await fetch("https://estadisticas.ecuavisa.com/sites/gestor/Tools/oracle/oracle_2.php", requestOptions);;
+		const resp = await fetch("https://bigdata.ecuavisa.com:10001/api/Trx/mdb/ISugerencia", requestOptions);;
 		return await resp.text();
 	} catch (error) {
 		console.log(error);
