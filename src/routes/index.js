@@ -32,7 +32,7 @@ var oracleApi = async function (json = {}) {
 		  body: raw,
 		  redirect: "follow"
 		};
-		const resp = await fetch("https://bigdata.ecuavisa.com:10001/api/Trx/mdb/ISugerencia", requestOptions);;
+		const resp = await fetch("https://estadisticas.ecuavisa.com/sites/gestor/Tools/oracle/oracle_create.php?api=ISugerencia", requestOptions);;
 		return await resp.text();
 	} catch (error) {
 		console.log(error);
